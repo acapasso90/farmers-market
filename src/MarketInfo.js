@@ -13,7 +13,8 @@ if(props.info){
     schedule = schedule.replace("<br>", '');
     schedule = schedule.replace("<br>", '');
     schedule = schedule.replace("<br>", '');
-    return(
+    if (marketName === "Didn't find that zip code") {return( "Did not find any markets for that zipcode");}
+    else return(
         <div className="MarketInfo">
             <h3 className="marketName"> {marketName} </h3>
             <ul>

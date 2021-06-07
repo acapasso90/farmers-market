@@ -19,10 +19,10 @@ function SearchId(){
     axios.get(apiURL).then(SetIdInfo);
 }
 
-useEffect(() => { 
+useEffect(() => { if (marketName !== "Didn't find that zip code"){
     let apiURL = `https://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=${id}`;
-    axios.get(apiURL).then(SetIdInfo); }
-, [id]);
+    axios.get(apiURL).then(SetIdInfo); }}
+, [marketName]);
 
 
     if (props.data){
