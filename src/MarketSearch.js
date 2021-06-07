@@ -8,12 +8,6 @@ const [loaded, setLoaded] = useState(false);
 const [zipData, setZipData] = useState();
 const [resultLength, setResultLength] = useState();
 let zipHolder = null;
-//API Documentation
-//https://search.ams.usda.gov/farmersmarkets/v1/svcdesc.html
-
-//Info search BY the above ID
-// https://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=${id}
-
 
 function SetData(response){
 setLoaded(true);
@@ -23,6 +17,8 @@ setResultLength(response.data.results.length);
 }
 
 function SearchZipcode(){
+//API Documentation
+//https://search.ams.usda.gov/farmersmarkets/v1/svcdesc.html
 const apiURL = `https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=${zipcode}`;
 axios.get(apiURL).then(SetData);
 }
@@ -41,12 +37,12 @@ function setZip(event){
 
 
 
-if(loaded){
+if(zipData){
 return( 
     <div className="MarketSearch">
         <form onSubmit={handleSubmit}>
             <input type="text" className="zipInput" onChange={setZip} placeholder="Enter Zipcode" />
-            <button className="searchButton">Search</button>
+            <input type="submit" />
         </form>
         {zipData.slice(0, resultLength).map(function(zipNumeral, index){
    return(<ZipcodeInfo data={zipNumeral} key={index} />)})}
