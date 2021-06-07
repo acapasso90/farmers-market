@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  
+  width: 100vw;
+  margin: 0;
+  position: relative;
 }
 
 .bodytext {background-color: rgba(150, 175, 120, 0.7);
@@ -10,19 +12,50 @@
 border-radius: 5px;}
 
 
-.container {width: 100vw;
+.container {width: 100%;
   background: url('./media/background.jpg');
   background-size: 140% 150%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
-height: 100vh;}
+  min-height: 100vh;
+}
 
-.corn {width: 3.5%;}
+.corn {height: 60px;}
+
+footer {  position: absolute;
+  bottom: 0;
+  width: 100%;
+text-align: center;}
+
+footer p {background-color: rgba(150, 175, 120, 0.8);
+  width: 16%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+}
 
 header {position: fixed;
+  width: 100%;
 top: 0;
-background-color: #2A5D2A;}
+color: #fffff1;
+height: 70px;
+background-color: #1e3f22;}
 
+header p {white-space: nowrap;
+  padding-left: 35%;
+font-size: 20pt;}
+h1 {width: 5%;}
+
+.left {width: 80%;}
+
+.MarketSearch {  padding-top: 90px;
+padding-bottom: 50px;}
+.MarketInfo {text-align: left;}
+
+.right {display: flex; 
+text-align: right;}
 .row {display: flex;
 flex-direction: row;}
 

@@ -7,6 +7,11 @@ function App() {
       <div className="container">
         <MarketSearch />
       </div>
+      <footer>
+        <p>
+        App made by <a href="https://amandacapasso.com" target="_blank">Amanda</a>
+        </p>
+      </footer>
     </div>
   );
 }

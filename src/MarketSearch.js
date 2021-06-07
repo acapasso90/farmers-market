@@ -51,15 +51,22 @@ return(
     <div className="MarketSearch">
         <header>
             <div className="row">
-                <form onSubmit={handleSubmit}>
-                    <input type="text" className="zipInput" onChange={setZip} placeholder="Enter Zipcode" />
-                    <input type="submit" />
-                </form>
-                <img src={corn} alt="corn" className="corn" />
+                <div className="left">
+                    <div className="row">
+                        <img src={corn} alt="corn" className="corn" /> <h1>Demeter</h1>
+                        <p>Find Farmers Markets near you</p>
+                    </div>
+                </div>
+                <div className="right">
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" className="zipInput" onChange={setZip} placeholder="Search by ZIP Code" />
+                        <input type="submit" />
+                    </form> 
+                </div>
             </div>
         </header>
     <div className="bodytext">
-        <h4>Showing Markets near {zipcode}</h4>
+        <h4>Currently Showing Markets near {zipcode}</h4>
         {zipData.slice(0, resultLength).map(function(zipNumeral, index){
           return(<ZipcodeInfo data={zipNumeral} key={index} />)})}
     </div>
