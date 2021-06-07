@@ -7,6 +7,7 @@ export default function MarketSearch(){
 const [zipcode, setZipcode] = useState("71286");
 const [zipData, setZipData] = useState();
 const [resultLength, setResultLength] = useState();
+
 let zipHolder = null;
 
 function SetData(response){
@@ -51,22 +52,18 @@ return(
     <div className="MarketSearch">
         <header>
             <div className="row">
-                <div className="left">
-                    <div className="row">
-                        <img src={corn} alt="corn" className="corn" /> <h1>Demeter</h1>
-                        <p>Find Farmers Markets near you</p>
-                    </div>
-                </div>
-                <div className="right">
+                <span className="Demeter">
+                    <img src={corn} alt="corn" className="corn" /> <h1>Demeter</h1>
+                </span>
+                <p>Find Farmers Markets near you</p>
                     <form onSubmit={handleSubmit}>
                         <input type="text" className="zipInput" onChange={setZip} placeholder="Search by ZIP Code" />
-                        <input type="submit" />
+                        <button type="submit" className="submitButton" ><i class="fas fa-search"></i> </button>
                     </form> 
-                </div>
             </div>
         </header>
     <div className="bodytext">
-        <h4>Currently Showing Markets near {zipcode}</h4>
+        <h2>Currently Showing Markets near {zipcode}</h2>
         {zipData.slice(0, resultLength).map(function(zipNumeral, index){
           return(<ZipcodeInfo data={zipNumeral} key={index} />)})}
     </div>

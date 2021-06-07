@@ -8,6 +8,7 @@ if(props.info){
     let products = props.info.marketdetails.Products;
     let schedule = props.info.marketdetails.Schedule;
     let marketName = props.name;
+    console.log(products);
     marketName = marketName.replace(".", '');
     marketName = marketName.replace(/[0-9]/g, '');
     schedule = schedule.replace("<br>", '');
@@ -19,7 +20,7 @@ if(props.info){
             <h3 className="marketName"> {marketName} </h3>
             <ul>
                 <li> {address} </li>
-                <li> <a href={google} target="_blank"><button>Directions</button></a></li>
+                <li> <a href={google} target="_blank"><button><i class="fas fa-map-marker-alt"></i> &nbsp;Directions</button></a></li>
                 <li> {schedule} </li>
                 <li> {products}</li>
             </ul>

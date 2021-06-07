@@ -9,7 +9,7 @@ function App() {
       </div>
       <footer>
         <p>
-        App made by <a href="https://amandacapasso.com" target="_blank">Amanda</a>
+        App made by <a href="https://amandacapasso.com" target="_blank">Amanda Capasso</a>
         </p>
       </footer>
     </div>
