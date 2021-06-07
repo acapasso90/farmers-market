@@ -1,6 +1,30 @@
 .App {
   text-align: center;
+  
 }
+
+.bodytext {background-color: rgba(150, 175, 120, 0.7);
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+border-radius: 5px;}
+
+
+.container {width: 100vw;
+  background: url('./media/background.jpg');
+  background-size: 140% 150%;
+  background-position-x: right;
+  background-position-y: bottom;
+height: 100vh;}
+
+.corn {width: 3.5%;}
+
+header {position: fixed;
+top: 0;
+background-color: #2A5D2A;}
+
+.row {display: flex;
+flex-direction: row;}
 
 ul {list-style: none;
 padding: 0;}

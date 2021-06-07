@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import ZipcodeInfo from "./ZipcodeInfo";
+import corn from "./media/corn.png";
 
 export default function MarketSearch(){
 const [zipcode, setZipcode] = useState("71286");
@@ -48,14 +49,21 @@ useEffect(() => {
 if(zipData){
 return( 
     <div className="MarketSearch">
-        <form onSubmit={handleSubmit}>
-            <input type="text" className="zipInput" onChange={setZip} placeholder="Enter Zipcode" />
-            <input type="submit" />
-        </form>
+        <header>
+            <div className="row">
+                <form onSubmit={handleSubmit}>
+                    <input type="text" className="zipInput" onChange={setZip} placeholder="Enter Zipcode" />
+                    <input type="submit" />
+                </form>
+                <img src={corn} alt="corn" className="corn" />
+            </div>
+        </header>
+    <div className="bodytext">
         <h4>Showing Markets near {zipcode}</h4>
         {zipData.slice(0, resultLength).map(function(zipNumeral, index){
-   return(<ZipcodeInfo data={zipNumeral} key={index} />)})}
-    </div>)}
+          return(<ZipcodeInfo data={zipNumeral} key={index} />)})}
+    </div>
+</div>)}
 
 else{ 
     SearchZipcode(); 

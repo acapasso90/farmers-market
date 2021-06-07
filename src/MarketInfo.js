@@ -19,7 +19,7 @@ if(props.info){
             <h3 className="marketName"> {marketName} </h3>
             <ul>
                 <li> {address} </li>
-                <li> <a href={google} target="_blank">Directions</a></li>
+                <li> <a href={google} target="_blank"><button>Directions</button></a></li>
                 <li> {schedule} </li>
                 <li> {products}</li>
             </ul>
