@@ -52,7 +52,7 @@ footer {  position: absolute;
 text-align: center;}
 
 footer p {
-  width: 16%;
+  width: 18%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 2px;
@@ -80,7 +80,7 @@ input {font-size: 12pt;
 
 .MarketSearch {  padding-top: 90px;
   width: 100%;
-padding-bottom: 50px;}
+padding-bottom: 70px;}
 
 .MarketInfo {text-align: left;}
 

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import ZipcodeInfo from "./ZipcodeInfo";
 import corn from "./media/corn.png";
+import Map from "./Map";
+
 
 export default function MarketSearch(){
 const [zipcode, setZipcode] = useState("71286");
@@ -10,10 +12,12 @@ const [resultLength, setResultLength] = useState();
 
 let zipHolder = null;
 
+//APIKEY FOR GOOGLE MAPS 
+// AIzaSyBI6pjFBimqvr1IoOCfHcg1sznQluz5AOM
+
 function SetData(response){
 setZipData(response.data.results);
 setResultLength(response.data.results.length);
-
 }
 
 function SearchZipcode(){
@@ -22,6 +26,7 @@ function SearchZipcode(){
 const apiURL = `https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=${zipcode}`;
 axios.get(apiURL).then(SetData);
 }
+
 
 
 function handleSubmit(event){
@@ -65,7 +70,11 @@ return(
     <div className="bodytext">
         <h2>Currently Showing Markets near {zipcode}</h2>
         {zipData.slice(0, resultLength).map(function(zipNumeral, index){
-          return(<ZipcodeInfo data={zipNumeral} key={index} />)})}
+          return(
+          <div className="marketInfo">
+          <ZipcodeInfo data={zipNumeral} key={index} />
+          <Map zip={zipcode}/>
+          </div>)})}
     </div>
 </div>)}
 
