@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  width: 100vw;
+  width: 98.95vw;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   position: relative;
@@ -17,6 +17,7 @@
   margin-right: auto;
 }
 
+.bodytext h2, .Demeter, header p {font-family: 'Mate SC', serif;}
 
 .container {width: 100%;
   background: url('./media/background.jpg');
@@ -34,7 +35,6 @@ padding-top: 9px;}
 .Demeter {white-space: nowrap;
   display: flex;
   flex-direction: row;
-  font-family: 'Mate SC', serif;
   font-size: 22pt;
 position: absolute;
 left: 0.5%;}
@@ -69,7 +69,9 @@ background-color: #1e3f22;}
 
 header p {white-space: nowrap;
 text-align: center;
-font-size: 20pt;}
+width: 490px;
+margin-top: 1.5%;
+font-size: 26pt;}
 
 input {font-size: 12pt;
 }
@@ -77,9 +79,12 @@ input {font-size: 12pt;
 .left {width: 100%;}
 
 .MarketSearch {  padding-top: 90px;
+  width: 100%;
 padding-bottom: 50px;}
 
 .MarketInfo {text-align: left;}
+
+.marketName {font-size: 24pt;}
 
 .right {display: flex; 
 text-align: right;}
@@ -92,9 +97,12 @@ justify-content: center;
 ul {list-style: none;
 padding: 0;}
 
-.zipInput {background-color: #6fbd69;}
+.zipInput {background-color: #6fbd69;
+height: 29px;}
 
 button, .submit {background-color: #96522a;
+  height: 35px;
+  font-size: 12pt;
 color: #f5cc9e;}
 
 button:active {position: relative;

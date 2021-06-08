@@ -14,14 +14,16 @@ if(props.info){
     schedule = schedule.replace("<br>", '');
     schedule = schedule.replace("<br>", '');
     schedule = schedule.replace("<br>", '');
+    schedule = schedule.replace(";", '');
     if (marketName === "Didn't find that zip code") {return( "Did not find any markets for that zipcode");}
     else return(
         <div className="MarketInfo">
-            <h3 className="marketName"> {marketName} </h3>
+            <h2 className="marketName"> {marketName} </h2>
             <ul>
+            <li> <a href={google} target="_blank"><button><i class="fas fa-map-marker-alt"></i> &nbsp;Directions</button></a></li>
                 <li> {address} </li>
-                <li> <a href={google} target="_blank"><button><i class="fas fa-map-marker-alt"></i> &nbsp;Directions</button></a></li>
                 <li> {schedule} </li>
+                <li><h2>Selling: </h2></li>
                 <li> {products}</li>
             </ul>
         </div>
