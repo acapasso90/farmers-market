@@ -3,17 +3,22 @@ import axios from "axios";
 import ZipcodeInfo from "./ZipcodeInfo";
 import corn from "./media/corn.png";
 import Map from "./Map";
+import City from "./City";
 
 
 export default function MarketSearch(){
 const [zipcode, setZipcode] = useState("71286");
 const [zipData, setZipData] = useState();
+const [cityData, setCityData] = useState();
 const [resultLength, setResultLength] = useState();
 
 let zipHolder = null;
 
 //APIKEY FOR GOOGLE MAPS 
 // AIzaSyBI6pjFBimqvr1IoOCfHcg1sznQluz5AOM
+
+function SetCityData(response){setCityData(response.data);}
+
 
 function SetData(response){
 setZipData(response.data.results);
@@ -46,7 +51,12 @@ useEffect(() => {
         const apiURL = `https://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=${zipcode}`;
         axios.get( apiURL, {
         cancelToken: cancelTokenSource.token
-      }).then(SetData);}
+      }).then(SetData);
+      const zipapiURL = `http://api.zippopotam.us/us/${zipcode}`;
+      axios.get( zipapiURL, {
+      cancelToken: cancelTokenSource.token
+    }).then(SetCityData);
+    }
     return function cleanup() {
       mounted = false
       cancelTokenSource.cancel();
@@ -63,16 +73,16 @@ return(
                 <p>Find Farmers Markets near you</p>
                     <form onSubmit={handleSubmit}>
                         <input type="text" className="zipInput" onChange={setZip} placeholder="Search by ZIP Code" />
-                        <button type="submit" className="submitButton" ><i class="fas fa-search"></i> </button>
+                        <button type="submit" className="submitButton" ><i className="fas fa-search"></i> </button>
                     </form> 
             </div>
         </header>
     <div className="bodytext">
-        <h2>Currently Showing Markets near {zipcode}</h2>
+        <h2>Currently Showing Markets near {zipcode} <City data={cityData}/></h2>
         {zipData.slice(0, resultLength).map(function(zipNumeral, index){
           return(
-          <div className="marketInfo">
-          <ZipcodeInfo data={zipNumeral} key={index} />
+          <div className="marketInfo" key={index} >
+          <ZipcodeInfo data={zipNumeral} />
           <Map zip={zipcode}/>
           </div>)})}
     </div>
