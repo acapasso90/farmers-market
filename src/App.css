@@ -12,7 +12,7 @@
   padding: 1px 25px;
   border: 6px solid #5f3721;
   border-radius: 5px;
-  width: 60%;
+  width: 64%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -82,7 +82,10 @@ input {font-size: 12pt;
   width: 100%;
 padding-bottom: 70px;}
 
-.MarketInfo {text-align: left;}
+.MarketInfo {text-align: left;
+  padding: 0.5vw 1.5vw;
+  background-color: rgba(216, 209, 209, 0.2);
+margin-bottom: 1.5%;}
 
 .marketName {font-size: 24pt;}
 
@@ -100,8 +103,9 @@ padding: 0;}
 .zipInput {background-color: #6fbd69;
 height: 29px;}
 
-button, .submit {background-color: #96522a;
-  height: 35px;
+button, .submit {background-color: #9b552d;
+  border: 2px solid #5F3721;
+  height: 34.5px;
   font-size: 12pt;
 color: #f5cc9e;}
 

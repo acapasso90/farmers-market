@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import MarketInfo from "./MarketInfo";
-
 //Info search BY the above ID
 // https://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=${id}
 

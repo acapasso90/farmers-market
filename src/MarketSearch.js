@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import ZipcodeInfo from "./ZipcodeInfo";
 import corn from "./media/corn.png";
-import Map from "./Map";
+import vegetables from "./media/vegetables.png";
 import City from "./City";
 
 
@@ -68,7 +68,7 @@ return(
         <header>
             <div className="row">
                 <span className="Demeter">
-                    <img src={corn} alt="corn" className="corn" /> <h1>Demeter</h1>
+                    <img src={vegetables} alt="corn" className="corn" /> <h1>Demeter</h1>
                 </span>
                 <p>Find Farmers Markets near you</p>
                     <form onSubmit={handleSubmit}>
@@ -83,7 +83,6 @@ return(
           return(
           <div className="marketInfo" key={index} >
           <ZipcodeInfo data={zipNumeral} />
-          <Map zip={zipcode}/>
           </div>)})}
     </div>
 </div>)}
