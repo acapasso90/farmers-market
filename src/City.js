@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function City(props){
-console.log(props.data)
 
     if (props.data){
         let places = props.data.places;
