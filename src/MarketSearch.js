@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import ZipcodeInfo from "./ZipcodeInfo";
-import corn from "./media/corn.png";
 import vegetables from "./media/vegetables.png";
 import City from "./City";
 
@@ -17,12 +16,15 @@ let zipHolder = null;
 //APIKEY FOR GOOGLE MAPS 
 // AIzaSyBI6pjFBimqvr1IoOCfHcg1sznQluz5AOM
 
-function SetCityData(response){setCityData(response.data);}
+function SetCityData(response){
+    setCityData(response.data);}
 
 
 function SetData(response){
+    if (response.data.results[0].id === "Error"){setCityData(null)}
 setZipData(response.data.results);
 setResultLength(response.data.results.length);
+
 }
 
 function SearchZipcode(){
@@ -78,7 +80,11 @@ return(
             </div>
         </header>
     <div className="bodytext">
-        <h2>Currently Showing Markets near {zipcode} <City data={cityData}/></h2>
+        <h2>
+            <div className="cityRow">
+            Currently Showing Markets near <City data={cityData}/>        
+            </div>
+        </h2>
         {zipData.slice(0, resultLength).map(function(zipNumeral, index){
           return(
           <div className="marketInfo" key={index} >

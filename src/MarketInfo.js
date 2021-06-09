@@ -19,8 +19,8 @@ if(props.info){
         <div className="MarketInfo">
             <h2 className="marketName"> {marketName} </h2>
             <ul>
-                <li> {address} </li>
-                <li> {schedule} </li>
+                <li> <strong> {address} </strong></li>
+                <li> <strong> {schedule}  </strong> </li>
                 <li> <a href={google} target="_blank" rel="noreferrer"><button><i className="fas fa-map-marker-alt"></i> &nbsp;Directions</button></a></li>
                 <li><h2>Selling: </h2></li>
                 <li> {products}</li>

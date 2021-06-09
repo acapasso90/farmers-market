@@ -11,7 +11,7 @@
 .bodytext {
   padding: 1px 25px;
   border: 6px solid #5f3721;
-  border-radius: 5px;
+  border-radius: 3px;
   width: 64%;
   margin-left: auto;
   margin-right: auto;
@@ -19,6 +19,12 @@
 
 .bodytext h2, .Demeter, header p {font-family: 'Mate SC', serif;}
 
+.bodytext h2 {margin-top: 0.5%;
+margin-bottom: 1.5%;}
+
+.cityRow p {margin: 0;
+
+}
 .container {width: 100%;
   background: url('./media/background.jpg');
   background-size: 140% 150%;
@@ -37,13 +43,15 @@ padding-top: 9px;}
   flex-direction: row;
   font-size: 22pt;
 position: absolute;
+user-select: none;
 left: 0.5%;}
 
 .Demeter h1 {margin: 0;
+  text-shadow: -2px 0px #641b0e, 0px -2px #641b0e, 2px 0px #641b0e, 0px 2px #641b0e;
 padding-left: 8px;}
 
 form {position: absolute;
-right: 8px;
+right: 9px;
 top: 15px;}
 
 footer {  position: absolute;
@@ -57,19 +65,19 @@ footer p {
   margin-right: auto;
   border-radius: 2px;
   border: 4px solid #5f3721;
-  border-radius: 2px;
 }
 
 header {position: fixed;
   width: 100%;
 top: 0;
-color: #fffff1;
+color: #f1f1f1;
 height: 70px;
 background-color: #1e3f22;}
 
 header p {white-space: nowrap;
 text-align: center;
 width: 490px;
+user-select: none;
 margin-top: 1.5%;
 font-size: 26pt;}
 
@@ -78,6 +86,7 @@ input {font-size: 12pt;
 
 .left {width: 100%;}
 
+li {margin-top: 6px;}
 .MarketSearch {  padding-top: 90px;
   width: 100%;
 padding-bottom: 70px;}
@@ -85,6 +94,8 @@ padding-bottom: 70px;}
 .MarketInfo {text-align: left;
   padding: 0.5vw 1.5vw;
   background-color: rgba(216, 209, 209, 0.2);
+  border-radius: 3px;
+  padding-bottom: 1.4vw;
 margin-bottom: 1.5%;}
 
 .marketName {font-size: 24pt;}
@@ -98,9 +109,13 @@ justify-content: center;
 }
 
 ul {list-style: none;
+  margin: 0;
 padding: 0;}
 
-.zipInput {background-color: #6fbd69;
+.zipInput {background-color: #3c6938;
+  position: relative;
+  color: #f1f1f1;
+  left: -2px;
 height: 29px;}
 
 button, .submit {background-color: #9b552d;
@@ -111,3 +126,7 @@ color: #f5cc9e;}
 
 button:active {position: relative;
 top: 2px;}
+
+@media only screen and (max-width: 500px) {
+  header p  {white-space: normal;}
+}
