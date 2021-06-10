@@ -215,7 +215,10 @@ top: 2px;}
 
 
 @media only screen and (max-width: 1111px) and (min-width: 851px){ 
-
+  .bodytext {
+    width: 78%;
+   }
+   
   .zipInput {width: 170px;
     font-size: 12pt;}
 
@@ -231,6 +234,10 @@ top: 2px;}
 
 @media only screen and (max-width: 850px) and (min-width: 501px){
 
+  .bodytext {
+    width: 78%;
+   }
+
   .zipInput {width: 170px;
     font-size: 12pt;}
 
@@ -245,6 +252,11 @@ top: 2px;}
 }
 
 @media only screen and (max-width: 500px) {
+
+  .bodytext {
+   margin-top: 20px;
+   width: 78%;
+  }
 
   .container {width: 100%;
     background: url('./media/background.jpg');
