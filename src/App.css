@@ -237,9 +237,6 @@ top: 2px;}
   background-size: cover;
     display: block;
     background-attachment: fixed;
-    position: fixed;
-    left: 0;
-    top: 0;
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
