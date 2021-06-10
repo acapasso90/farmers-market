@@ -17,7 +17,7 @@ if(props.info){
     if (marketName === "Didn't find that zip code") {return( "Did not find any markets for that zipcode");}
     else return(
         <div className="MarketInfo">
-            <h2 className="marketName"> {marketName} </h2>
+            <h2 className="marketName"> {marketName} </h2> 
             <ul>
                 <li className="address"> <strong> {address} </strong></li>
                 <li className="schedule"> <strong> {schedule}  </strong> </li>
