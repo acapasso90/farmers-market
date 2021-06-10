@@ -223,6 +223,10 @@ top: 2px;}
   padding-top: 18px;}
   header p { font-size: 20pt;
     padding-top: 12px;}
+
+    .MarketInfo {
+      margin-bottom: 15px;}
+      
 }
 
 @media only screen and (max-width: 850px) and (min-width: 501px){
@@ -232,7 +236,11 @@ top: 2px;}
 
   .Demeter h1 {font-size: 29pt;
   padding-top: 18px;}
+
   header p {display: none;}
+
+  .MarketInfo {
+    margin-bottom: 15px;}
 
 }
 
@@ -255,6 +263,10 @@ top: 2px;}
   .Demeter {bottom: 0;}
   .Demeter h1 {font-size: 32pt;
     padding-top: 18px;}
+
+    
+.MarketInfo {
+margin-bottom: 20px;}
 
     form {position: absolute;
     top: 5px;
