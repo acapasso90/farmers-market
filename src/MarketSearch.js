@@ -54,7 +54,7 @@ useEffect(() => {
         axios.get( apiURL, {
         cancelToken: cancelTokenSource.token
       }).then(SetData);
-      const zipapiURL = `http://api.zippopotam.us/us/${zipcode}`;
+      const zipapiURL = `https://api.zippopotam.us/us/${zipcode}`;
       axios.get( zipapiURL, {
       cancelToken: cancelTokenSource.token
     }).then(SetCityData);

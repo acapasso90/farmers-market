@@ -1,3 +1,5 @@
+body {  overflow-x: hidden;}
+
 a {text-decoration: none;
   font-weight: bold;
 color: #63096e;}
@@ -10,7 +12,7 @@ color: #f1f1f1;}
 
 .App {
   text-align: center;
-  width: 98.95vw;
+  width: 100vw;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   position: relative;
@@ -204,7 +206,7 @@ top: 2px;}
 
 
 @media only screen and (max-width: 1111px) and (min-width: 851px){ 
-  
+
   .zipInput {width: 170px;
     font-size: 12pt;}
 
@@ -215,7 +217,7 @@ top: 2px;}
 }
 
 @media only screen and (max-width: 850px) and (min-width: 501px){
-  
+
   .zipInput {width: 170px;
     font-size: 12pt;}
 
@@ -227,9 +229,14 @@ top: 2px;}
 
 @media only screen and (max-width: 500px) {
   
-  .Demeter h1 {font-size: 29pt;
+  .Demeter {bottom: 0;}
+  .Demeter h1 {font-size: 32pt;
     padding-top: 18px;}
 
+    form {position: absolute;
+    top: 5px;
+  right: 5px;}
+    header {height: 90px;}
   header p  {display: none}
 
   .zipInput {width: 170px;
