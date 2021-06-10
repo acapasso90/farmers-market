@@ -6,7 +6,7 @@ import City from "./City";
 
 
 export default function MarketSearch(){
-const [zipcode, setZipcode] = useState("71286");
+const [zipcode, setZipcode] = useState("06507");
 const [zipData, setZipData] = useState();
 const [cityData, setCityData] = useState();
 const [resultLength, setResultLength] = useState();
