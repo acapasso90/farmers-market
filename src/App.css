@@ -1,3 +1,9 @@
+a {text-decoration: none;}
+
+::selection {background-color: #5F3721;
+color: #f1f1f1;}
+.address {font-size: 15pt;}
+
 .App {
   text-align: center;
   width: 98.95vw;
@@ -47,7 +53,7 @@ user-select: none;
 left: 0.5%;}
 
 .Demeter h1 {margin: 0;
-  text-shadow: -2px 0px #641b0e, 0px -2px #641b0e, 2px 0px #641b0e, 0px 2px #641b0e;
+  text-shadow: -2px 0px #641b0e, 0px -2px #641b0e, 2px 0px #641b0e, 0px 2px #641b0e, 1px 1px 5px #000000;
 padding-left: 8px;}
 
 form {position: absolute;
@@ -79,6 +85,7 @@ text-align: center;
 width: 490px;
 user-select: none;
 margin-top: 1.5%;
+text-shadow: 1px 1px 5px #000000;
 font-size: 26pt;}
 
 input {font-size: 12pt;
@@ -98,7 +105,9 @@ padding-bottom: 70px;}
   padding-bottom: 1.4vw;
 margin-bottom: 1.5%;}
 
-.marketName {font-size: 24pt;}
+.marketName {font-size: 24pt;
+  text-align: center;
+color:  #442312;}
 
 .right {display: flex; 
 text-align: right;}
@@ -108,18 +117,22 @@ flex-direction: row;
 justify-content: center;
 }
 
+.schedule {font-size: 13pt;}
 ul {list-style: none;
   margin: 0;
 padding: 0;}
 
 .zipInput {background-color: #3c6938;
   position: relative;
+  border: 2px solid #5F3721;
+  box-shadow: inset 1px 1px 3px #0e1d0c;
   color: #f1f1f1;
   left: -2px;
   width: 175px;
 height: 29px;}
 
 button, .submit {background-color: #9b552d;
+  user-select: none;
   border: 2px solid #5F3721;
   height: 34.5px;
   font-size: 12pt;
@@ -144,8 +157,9 @@ top: 2px;}
   
   .Demeter h1 {font-size: 29pt;
     padding-top: 10px;}
-  header p  {white-space: normal;}
 
-  .zipInput {width: 100px;}
+  header p  {display: none}
+
+.zipInput {width: 130px;}
 }
 
