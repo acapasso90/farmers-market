@@ -15,6 +15,7 @@ color: #f1f1f1;}
   margin: 0;
   position: relative;
 }
+.bodytext, .MarketInfo {  border-radius: 3px;}
 
 .bodytext, footer p {background-color: rgba(91, 160, 86, 0.92);}
 
@@ -23,10 +24,12 @@ color: #f1f1f1;}
   border: 6px solid #5f3721;
   border-radius: 3px;
   width: 64%;
-  box-shadow: 1px 1px 10px #382210;
+  box-shadow: inset 0px 0px 4px #382210, 1px 1px 10px #382210;
   margin-left: auto;
   margin-right: auto;
 }
+
+
 
 .bodytext h2, .Demeter, header p {font-family: 'Mate SC', serif;}
 
@@ -55,7 +58,7 @@ padding-top: 9px;}
   font-size: 22pt;
 position: absolute;
 user-select: none;
-left: 0.5%;}
+left: 7px;}
 
 .Demeter h1 {margin: 0;
   text-shadow: -2px 0px #641b0e, 0px -2px #641b0e, 2px 0px #641b0e, 0px 2px #641b0e, 1px 1px 5px #000000;
@@ -69,6 +72,7 @@ footer {  position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
+  
   height: 60px;
 text-align: center;}
 
@@ -76,6 +80,7 @@ footer p {
   width: 18%;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: inset 0px 0px 2px #382210, 1px 1px 3px #382210;
   border-radius: 2px;
   padding: 5px 0px;
   border: 4px solid #5f3721;
@@ -98,27 +103,34 @@ text-shadow: 1px 1px 5px #000000;
 font-size: 26pt;}
 
 
-input {font-size: 12pt;
+input {font-size: 13pt;
 }
 
 .left {width: 100%;}
 
 li {margin-top: 6px;}
+
+
 .MarketSearch {  padding-top: 90px;
   width: 100%;
 padding-bottom: 70px;}
 
+
 .MarketInfo {text-align: left;
   padding: 0.5vw 1.5vw;
   background-color: rgba(216, 209, 209, 0.2);
-  border-radius: 3px;
   box-shadow: 1px 1px 3px #203810;
   padding-bottom: 1.4vw;
 margin-bottom: 1.5%;}
 
-.marketName {font-size: 24pt;
+.marketName {font-size: 25pt;
   text-align: center;
 color:  #442312;}
+
+::placeholder {
+  color: #cfbeab;
+  font-weight: initial;
+}
 
 .right {display: flex; 
 text-align: right;}
@@ -129,36 +141,53 @@ justify-content: center;
 }
 
 .schedule {font-size: 13pt;}
+
+.sellingHeader {margin-bottom: 0;}
+
 ul {list-style: none;
   margin: 0;
 padding: 0;}
 
-.zipInput {background-color: #3c6938;
+.zipInput {background-color: #43773e;
   position: relative;
   border: 2px solid #5F3721;
   padding-left: 5px;
+  padding-top: 5px;
   box-shadow: inset 1px 1px 3px #0e1d0c;
   text-shadow: 1px 1px 2px #000000;
   color: #f1f1f1;
+  font-weight: 550;
   left: -2px;
   width: 175px;
-height: 29px;}
+height: 25px;}
 
 button, .submit {background-color: #9b552d;
   user-select: none;
   text-shadow: 1px 1px 3px #000000;
   border: 2px solid #5F3721;
+  border-radius: 2px;
   height: 34.5px;
+  font-weight: bold;
   font-size: 12pt;
 color: #f5cc9e;}
 
-button:hover, .submit:hover {cursor: pointer;}
+button {margin: 7px 0;}
 
-.submit {  text-shadow: 1px 0px #331d11, -1px 0px #331d11, 0px -1px #331d11, 0px 1px #331d11, 1px 1px 3px #000000;
+button:hover, .submit:hover {cursor: pointer;
+  background-color: #f5cc9e;
+  text-shadow: 1px 1px 3px #bb8769;
+color: #9b552d; }
+
+.submitButton {  text-shadow: 1px 0px #331d11, -1px 0px #331d11, 0px -1px #331d11, 0px 1px #331d11, 1px 1px 3px #000000;
+  position: relative;
+  padding-top: 2px;
+  top: -2px;
 }
 
 button:active {position: relative;
 top: 2px;}
+
+.submitButton:active {top: 0px;}
 
 @media only screen and (max-width: 1111px) and (min-width: 851px){ 
   .App {width: 100vw;}
@@ -186,7 +215,7 @@ top: 2px;}
   .App {width: 100vw;}
   
   .Demeter h1 {font-size: 29pt;
-    padding-top: 10px;}
+    padding-top: 18px;}
 
   header p  {display: none}
 

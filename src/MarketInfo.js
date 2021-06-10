@@ -22,7 +22,7 @@ if(props.info){
                 <li className="address"> <strong> {address} </strong></li>
                 <li className="schedule"> <strong> {schedule}  </strong> </li>
                 <li> <a href={google} target="_blank" rel="noreferrer"><button><i className="fas fa-map-marker-alt"></i> &nbsp;Directions</button></a></li>
-                <li><h2>Selling: </h2></li>
+                <li><h2 className="sellingHeader">Selling: </h2></li>
                 <li> {products}</li>
             </ul>
         </div>

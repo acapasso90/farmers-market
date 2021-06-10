@@ -38,7 +38,7 @@ axios.get(apiURL).then(SetData);
 
 function handleSubmit(event){
     event.preventDefault();
-    setZipcode(zipHolder);
+    if (zipHolder) { setZipcode(zipHolder);}
 }
 
 function setZip(event){
@@ -75,7 +75,7 @@ return(
                 <p>Find Farmers Markets near you</p>
                     <form onSubmit={handleSubmit}>
                         <input type="text" className="zipInput" onChange={setZip} placeholder="Search by ZIP Code" />
-                        <button type="submit" className="submitButton" ><i className="fas fa-search"></i> </button>
+                        <button type="submit" className="submitButton" ><i className="fas fa-search"></i> </button> 
                     </form> 
             </div>
         </header>
