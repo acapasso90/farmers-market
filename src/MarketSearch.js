@@ -70,7 +70,7 @@ return(
         <header>
             <div className="row">
                 <span className="Demeter">
-                    <img src={vegetables} alt="corn" className="corn" /> <h1>Demeter</h1>
+                    <img src={vegetables} alt="vegetables-icob" className="vegetables" /> <h1>Demeter</h1>
                 </span>
                 <p>Find Farmers Markets near you</p>
                     <form onSubmit={handleSubmit}>
@@ -95,7 +95,23 @@ return(
 
 else{ 
     SearchZipcode(); 
-    return("loading");}
+    return(
+<div className="loading">
+    <div className="MarketSearch">
+        <header>
+            <div className="row">
+                <span className="Demeter">
+                    <img src={vegetables} alt="corn" className="corn" /> <h1>Demeter</h1>
+                </span>
+                <p>Find Farmers Markets near you</p>
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" className="zipInput" onChange={setZip} placeholder="Search by ZIP Code" />
+                        <button type="submit" className="submitButton" ><i className="fas fa-search"></i> </button> 
+                    </form> 
+            </div>
+        </header>
+    </div>
+</div>);}
 }
 
 
