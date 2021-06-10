@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+      <div class="background-area"></div>
         <MarketSearch />
       </div>
       <footer>

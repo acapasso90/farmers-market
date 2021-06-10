@@ -70,7 +70,7 @@ return(
         <header>
             <div className="row">
                 <span className="Demeter">
-                    <img src={vegetables} alt="vegetables-icob" className="vegetables" /> <h1>Demeter</h1>
+                    <img src={vegetables} alt="vegetables-icon" className="vegetables" /> <h1>Demeter</h1>
                 </span>
                 <p>Find Farmers Markets near you</p>
                     <form onSubmit={handleSubmit}>
@@ -101,7 +101,7 @@ else{
         <header>
             <div className="row">
                 <span className="Demeter">
-                    <img src={vegetables} alt="corn" className="corn" /> <h1>Demeter</h1>
+                    <img src={vegetables} alt="vegetables-icon" className="vegetables" /> <h1>Demeter</h1>
                 </span>
                 <p>Find Farmers Markets near you</p>
                     <form onSubmit={handleSubmit}>
