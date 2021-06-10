@@ -180,16 +180,26 @@ button:hover, .submit:hover {cursor: pointer;
   text-shadow: 1px 1px 3px #bb8769;
 color: #9b552d; }
 
+button:active, .submitButton:active {animation: buttonActive 0.75s normal;}
+button:active {position: relative;
+top: 2px;}
+
+.submitButton:active {top: 0px;}
+
 .submitButton {  text-shadow: 1px 0px #331d11, -1px 0px #331d11, 0px -1px #331d11, 0px 1px #331d11, 1px 1px 3px #000000;
   position: relative;
   padding-top: 2px;
   top: -2px;
 }
 
-button:active {position: relative;
-top: 2px;}
 
-.submitButton:active {top: 0px;}
+@keyframes buttonActive { 0% {background-color: #f5cc9e;
+  text-shadow: 1px 1px 3px #bb8769;
+  color:  #9b552d;}
+100% {background-color: #9b552d;
+  text-shadow: 1px 1px 3px #000000;
+  color: #bb8769;}}
+
 
 
 
